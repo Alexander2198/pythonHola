@@ -22,7 +22,10 @@ luego colocar el siguiente comando:
 docker build -t flask-app .
 
 ## 3 Ejecutar el contenedor 
-docker run -p 5000:5000 flask-app
+docker run -p 5000:5000 --name app flask-app
+
+DEBO HACER LOS CAMBIOS POR DOCKER HUB 
+
 
 y listo podremos ingresar al hola mundo :D
 
