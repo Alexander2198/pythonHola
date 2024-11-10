@@ -1,31 +1,33 @@
-# Proyecto "Hola Mundo" en Flask
+# "Hello World" project in Flask
 
-Este es un proyecto simple en **Python** usando **Flask** que muestra un mensaje de "Hola Mundo" en el navegador. El proyecto está dockerizado, por lo que puedes ejecutarlo fácilmente en cualquier sistema que tenga **Docker** instalado.
+This is a simple **Python** project using **Flask** that displays a "Hello World" message in the browser. The project is dockerized, so you can easily run it on any system that has **Docker** installed.
 
-## Requisitos
-- git instalado en tu sistema.  [Instrucciones de instalación de GIT](https://git-scm.com/downloads)
-- Docker instalado en tu sistema. [Instrucciones de instalación de Docker](https://docs.docker.com/get-docker/)
+## Requirements
+- git installed on your system. [GIT installation instructions](https://git-scm.com/downloads)
+- Docker installed on your system. [Docker installation instructions](https://docs.docker.com/get-docker/)
 
-##  Configuración y Ejecución 
-## 1 Clonar el repositorio de github 
-desde el git debemos crear una carpeta cualquier nombre donde vayamos a clonar el repositorio.
-una ves tengamos definido la direccion donde vamos a clonar
-colocamos el siguiente comando 
+## Setup and Execution
+## 1 Clone the github repository
+From git we must create a folder with any name where we are going to clone the repository.
+Once we have defined the address where we are going to clone
+we place the following command
 -git init
-luego :
+then :
 - git clone https://github.com/Alexander2198/pythonHola
 
-## 2 Construir la imagen de Docker 
-desde el CMD de tu sistema windows debemmos ir a la direccion donde se descargo el repositorio y colocar cd pythonHola
+## 2 Build the Docker image (DockerHub)
+From the CMD of your Windows system we must go to the address where the repository was downloaded and place cd pythonHola
 
-luego colocar el siguiente comando:
+then place the following command:
 docker build -t flask-app .
 
-## 3 Ejecutar el contenedor 
+## 3 Run the container
 docker run -p 5000:5000 --name app flask-app
 
-DEBO HACER LOS CAMBIOS POR DOCKER HUB 
-
-
-y listo podremos ingresar al hola mundo :D
-
+## 2nd FORM to run the project (DOCKER HUB)
+we create a folder in cmd where the project will be saved
+- inside the folder run the following command (creates the docker image)
+docker pull alexanderc7777/flask-app
+- finally we put:
+docker run -p 5000:5000 --name app alexanderc7777/flask-app
+# ready our project will be running at http://127.0.0.1:5000
