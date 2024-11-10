@@ -19,15 +19,15 @@ then :
 From the CMD of your Windows system we must go to the address where the repository was downloaded and place cd pythonHola
 
 then place the following command:
-docker build -t flask-app .
+* docker build -t flask-app .
 
 ## 3 Run the container
-docker run -p 5000:5000 --name app flask-app
+* docker run -p 5000:5000 --name app flask-app
 
 ## 2nd FORM to run the project (DOCKER HUB)
 we create a folder in cmd where the project will be saved
 - inside the folder run the following command (creates the docker image)
-docker pull alexanderc7777/flask-app
+* docker pull alexanderc7777/flask-app
 - finally we put:
-docker run -p 5000:5000 --name app alexanderc7777/flask-app
+* docker run -p 5000:5000 --name app alexanderc7777/flask-app
 # ready our project will be running at http://127.0.0.1:5000
