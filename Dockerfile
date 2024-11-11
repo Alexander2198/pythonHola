@@ -13,8 +13,8 @@ RUN pip install --no-cache-dir -r requirements.txt
 # Copia el código de la aplicación en el contenedor
 COPY . .
 
-# Expone el puerto en el que correrá Flask
+# Expone el puerto en el que correrá Flask (se usará la variable de entorno PORT)
 EXPOSE 5000
 
-# Comando para ejecutar la aplicación Flask
-CMD ["python", "app.py"]
+# Comando para ejecutar la aplicación con Gunicorn
+CMD ["gunicorn", "app:app", "-b", "0.0.0.0:5000"]
